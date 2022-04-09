@@ -1,0 +1,26 @@
+name = "protocol_worker"
+version = "0.1.0"
+authors = [chigorgoshanski"]
+edition = "2022"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+itertools = "0.10"
+serde_json = "1.0"
+tokio = { version = "1.15", features = ["full"] }
+tracing = "0.1"
+# custom modules
+massa_hash = { path = "../hash" }
+massa_logging = { path = "../logging" }
+massa_models = { path = "../models" }
+massa_network_exports = { path = "../network-exports" }
+massa_protocol_exports = { path = "../protocol-exports" }
+massa_storage = { path = "../storage" }
+massa_time = { path = "../time" }
+
+[dev-dependencies]
+lazy_static = "1.4"
+futures = "0.3"
+signature = { path = "../signature" }
+serial_test = "0.5"
